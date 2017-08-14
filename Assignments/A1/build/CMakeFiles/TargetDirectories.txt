@@ -1,0 +1,3 @@
+C:/Users/zhexian/Desktop/Computational Fabrication/A1/build/CMakeFiles/voxelizer.dir
+C:/Users/zhexian/Desktop/Computational Fabrication/A1/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/zhexian/Desktop/Computational Fabrication/A1/build/CMakeFiles/ZERO_CHECK.dir

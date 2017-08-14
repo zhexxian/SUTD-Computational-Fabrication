@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<html>
+	<title>Some Notes on Assignment One</title>
+	<xmp id='md' theme='Simplex'>Some Notes on Assignment One
+============================
+
+Once again, so welcome to Computational Fabrication.   
+Don't worry if assignment one or the course may seem daunting, especially if you are not from Graphics and Visualization.    
+Nevertheless, here are some pointers to help you along.   
+
+Why C++?
+--------
+
+Some people may feel like... why use a different language when Python or Java can probably cut it (functionality wise)?   
+
+The main reason is SPEED. It's probably the language that can allow you to be close enough to meddle with the transistors with roughly the speed of assembly, yet offer a level of abstraction high enough for you to do some of the most serious programming in the world. Its benefits goes on and on...    
+
+You can check out those links to see the difference C++ makes:   
+http://codegolf.stackexchange.com/questions/26323/how-slow-is-python-really-or-how-fast-is-your-language   
+http://codegolf.stackexchange.com/questions/26323/how-slow-is-python-really-or-how-fast-is-your-language
+
+It's also the reason why you your 3D renderings in intro to design and other courses can be rendered in timeframes of hours instead of weeks, such that you can finish those deadlines in time.  
+
+For Mac Users
+-------------
+You will need XCode installed. It's free and you can get it from the Mac App store. It's Apple's comprehensive IDE for C++ programs, iOS programs, etc. 
+
+Then you will also need CMake. 
+Download it at:   http://www.cmake.org/download/
+
+Then, for the assignment:
+
+-    Download it, unzip it...   
+-    Open terminal and cd (change directory) into the unzipped location, which will be the working directory.   
+
+          cd <WORKINGDIR>
+
+-    Then use the command
+
+          cmake -G 'Code'
+	
+-    Now, if you look at the working directory, there should be some new files created. You should see a `voxelizer.xcodeproj`. Just open it in XCode.
+-    On the Navigation bar on the left, go to voxelizer -> source files -> main.cpp 
+-    To run, you can change the target on the XCode toolbar to 'voxelizer', select your mac, then click the run button.
+-    For XCode, you can set the arguments using this guide http://pinkstone.co.uk/how-to-add-command-line-arguments-in-xcode-5/
+
+Stuff to Lookout for in the Code
+--------------------------------
+
+In 3D graphics programs, which compFab deals with, linear algebra is everywhere.    
+But, the kind of linear algebra you will probably be dealing with most of the time are with vectors of length 2, 3, 4, and matrices of sizes of 3x3 and 4x4.   
+Most C++ graphics programs will probably have some linear algebra library providing the classes for each of these linear algebra datatypes.   
+
+In the skeleton code, the required linear algebra classes have already been provided. It is a subset of a typical graphics linear algebra library.   
+
+The have provided a thee following:    
+
+`CompFab::Vec3` : a length 3 vector of double (c++ double precision real-valued type)   
+
+Operators:   
+
+- `-` Minus   
+- `+` Plus   
+- `*` [Dot product](en.wikipedia.org/wiki/Dot_product)   
+- `%` [Cross product](en.wikipedia.org/wiki/Cross_product)   
+
+The triangle intersection part may be a bit troublesome...   
+You can try to base your code off these:   
+
+- http://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm   
+- http://www.lighthouse3d.com/tutorials/maths/ray-triangle-intersection/   
+- http://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-rendering-a-triangle/geometry-of-a-triangle   
+
+If you want to have a deeper feel for ray triangle intersection, you can refer to the raycasting II set of slides of MIT's intro to graphics course:
+http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-837-computer-graphics-fall-2012/lecture-notes/
+
+There are three functions in the code which have parts you need to write:
+
+	int rayTriangleIntersection(CompFab::Ray &ray, CompFab::Triangle &triangle) 
+
+	int numSurfaceIntersections(CompFab::Vec3 &voxelPos, CompFab::Vec3 &dir)
+
+	int main(int argc, char **argv)
+
+   
+These functions are global functions... and there are two global variables you will have to deal with
+
+	TriangleList g_triangleList;
+   
+This is a c++ std::vector (array) of triangles. To access the x coordinate of the 1st vertex of the i'th triangle, you can use `g_triangleList[i].m_v1.m_x`
+
+The other global variable you have to meddle with is 
+
+	CompFab::VoxelGrid *g_voxelGrid;
+   
+Your task is to write true or false to each of the i,j,k voxels.    
+The space you have to consider is from [0.0, 0.0, 0.0] to [1.0, 1.0, 1.0]. (This is not explicitly said in the instructions, but discovered after some testing)    
+To write `true` to the i,j,k voxel, you can use `g_voxelGrid->isInside(i, j, k) = true;`
+
+The skeleton code has already provided the logic the parsing, reading and writing of the obj files in the places needed. 
+</xmp>
+	<script src='http://strapdownjs.com/v/0.2/strapdown.js'></script>
+	</html>

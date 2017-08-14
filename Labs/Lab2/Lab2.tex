@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+
+\addtolength{\parskip}{\baselineskip}
+
+\begin{document}
+
+\section*{01.110: Computational Fabrication Summer 2017}
+
+\subsection*{Lab 2: Basic 3D Printing}
+
+\subsection*{May 30th (Tues) or Jun 1st (Thurs) 11:30am-1:30pm Fab Lab Ground Floor. Please check your respective slot.}
+
+\subsection*{\textcolor{red}{Report Due Jun 11th at 11:55pm.}}
+
+%\maketitle
+
+\section{Overview}
+In this lab, you will 3D print 1) a model of a scanned object captured in Lab 1, 2) a procedurally defined model from Assignment 2.
+
+\section{Software Requirement}
+This lab requires the use of the MankatiUM software. The software is available on Windows. It can be downloaded from \url{http://www.mankati.com/download/}. 
+
+Check the "How our entry level 3D\-printer works\_v2.pdf" for instructions on using the MankatiUM software. The software portion is from "6-Steps to slice your model" onwards. 
+
+You can also download and install the Meshmixer software by Autodesk. The software is useful for cleaning up the scanned meshes. The software is available at
+\url{http://www.meshmixer.com/download.html}. 
+
+\section{3D Printer Setup}
+Please read the "How our entry level 3D\-printer works\_v2.pdf" in the zip file. The fab Lab technician will also help you during the lab. 
+
+\section{Printing an OpenSCAD Object}
+
+The process to print an OpenSCAD object can be outlined as follows:
+
+\begin{enumerate}
+%\item If your object requires support structures, compute the support in the Meshmixer. Save the model with the support structures.
+\item Export the object with OpenSCAD as an .stl 3D model.
+\item Load the model into the 3D printing software, select the appropriate settings, slice the model (generate the gcode), and save the sliced model file (.gcode) to a SD card. 
+\item Prepare the 3D printer (check filament, nozzle, preheat, etc.).
+\item Plug in the SD card into the printer and print the file.
+\item After printing, remove the printed model from the build tray.
+
+Please refer to the "How our entry level 3D\-printer works\_v2.pdf" for more details and the exact steps needed.
+\end{enumerate}
+
+\section{Printing a Scanned Object}
+
+In general, printing the model of a scanned object should be similar to printing an OpenSCAD model.
+However, you have to make sure that your model that is watertight and does not have many mesh defects.
+You can fix your model by running the inspector in the Meshmixer ('Analysis' $\rightarrow$ 'Inspector') or by running the Poisson surface
+reconstruction in the MeshLab. 
+
+\section{Submission}
+
+\noindent Submit your assignment on e-dimension by \textcolor{red}{\textbf{June 14th by 11:55pm}}. Please submit a single archive (\texttt{.zip} or
+\texttt{.tar.gz}) containing:
+
+\begin{itemize}
+\item A write up for your group in either a text file or a pdf file. Describe any difficulties/experiences during the
+3D printing.
+\item Include some screenshots of your 3D prints ( the test object, the OpenSCAD object, and the
+scanned object).
+\item Write down the \textbf{names} of your group members. 
+\end{itemize}
+\end{document}

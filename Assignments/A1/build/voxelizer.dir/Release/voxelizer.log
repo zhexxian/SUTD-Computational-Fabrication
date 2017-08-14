@@ -1,0 +1,24 @@
+﻿Build started 5/24/2017 12:49:48 PM.
+     1>Project "C:\Users\zhexian\Desktop\Computational Fabrication\A1\build\voxelizer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "voxelizer.dir\Release\voxelizer.unsuccessfulbuild".
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"voxelizer.dir\Release\\" /Fd"voxelizer.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\main.cpp
+         main.cpp
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zhexian\Desktop\Computational Fabrication\A1\build\Release\voxelizer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"voxelizer.dir\Release\voxelizer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/Users/zhexian/Desktop/Computational Fabrication/A1/build/Release/voxelizer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/zhexian/Desktop/Computational Fabrication/A1/build/Release/voxelizer.lib" /MACHINE:X86 voxelizer.dir\Release\CompFab.obj
+         voxelizer.dir\Release\Mesh.obj
+         voxelizer.dir\Release\main.obj  /machine:X86 
+         voxelizer.vcxproj -> C:\Users\zhexian\Desktop\Computational Fabrication\A1\build\Release\voxelizer.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\zhexian\Desktop\Computational Fabrication\A1\build\Release\voxelizer.exe;#1" /manifest voxelizer.dir\Release\voxelizer.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "voxelizer.dir\Release\voxelizer.unsuccessfulbuild".
+         Touching "voxelizer.dir\Release\voxelizer.lastbuildstate".
+     1>Done Building Project "C:\Users\zhexian\Desktop\Computational Fabrication\A1\build\voxelizer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.05

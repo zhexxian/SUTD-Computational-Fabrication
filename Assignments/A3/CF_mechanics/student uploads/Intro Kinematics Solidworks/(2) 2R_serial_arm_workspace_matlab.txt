@@ -1,0 +1,17 @@
+% 2R serial arm
+
+l1 = 120; % link 1
+l2 = l1/2; % link 2
+
+%Angles
+theta1 = linspace(0,2*pi,20);
+theta2 = linspace(0,2*pi,20);
+
+%Counter
+for i = 1:20
+    for j = 1:20
+        xp=l1*cos(theta1(i))+l2*cos(theta1(i)+theta2(j));
+        yp=l1*sin(theta1(i))+l2*sin(theta1(i)+theta2(j));
+        plot(xp,yp,'*');hold on;
+    end
+end
